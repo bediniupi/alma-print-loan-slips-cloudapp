@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { ConfigurationComponent, ConfigurationGuard } from './configuration/configuration.component';
 import { MainComponent } from './main/main.component';
 import { SlipComponent } from './slip/slip.component';
+import { HelpComponent } from './help/help.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'configuration', component: ConfigurationComponent, canDeactivate: [ConfigurationGuard] },
   { path: 'slip', component: SlipComponent },
+   { path: 'help', component: HelpComponent},
 ];
 
 @NgModule({

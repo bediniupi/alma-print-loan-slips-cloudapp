@@ -68,7 +68,7 @@ export class MainComponent implements OnInit, OnDestroy {
     this.pageLoad$.unsubscribe();
   }
 
-  onEntitySelected(event) {
+  onEntitySelected(event: { checked: any; mmsId: any; }) {
     if (event.checked) this.ids.add(event.mmsId);
     else this.ids.delete(event.mmsId);
   }
@@ -86,7 +86,14 @@ export class MainComponent implements OnInit, OnDestroy {
       next: () => {
         setTimeout(()=>this.iframe.nativeElement.contentWindow.print(), 100)
       },
-      error: e => this.alert.error('An error occurred: ' + e),
+      error: (e: any) => {
+        if (typeof(e) === 'object') {
+          this.alert.error('An error occurred: ' + JSON.stringify(e));
+        } else {
+          this.alert.error('An error occurred: ' + e);
+        }
+      },       
+        
       complete: () => this.loading = false
     });
   }

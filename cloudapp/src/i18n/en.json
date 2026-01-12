@@ -4,6 +4,22 @@
   "NoEntities": "Please navigate to a list of loans.",
   "Print": "Print slip",
   "SelectProfile": "Select a print slip profile",
+  "Help": {
+    "Title": "Help Page",
+    "Description": "<p>To use the app to view user loans, select a print profile and print the receipt; it is important that the circulation desk is selected.</p>For a better result, remove the header and footer print options from the browser's print window and choose 'fit to page width'.<p>",
+    "ConfigurationTitle": "<h1>Configuration</h1>",
+    "ConfigurationText": "<p>You can create different print profiles or modify the default one.</p>",
+    "GeneralTabTitle": "<h2>General Tab</h2>",
+    "GeneralTabText": "<p>Select 'Vertical Table' to have headers repeated on separate lines (useful for receipt format on thermal printing);</p><p>choose whether to display the row with author information.</p>",
+    "AppearanceTabTitle": "<h2>Appearance Tab</h2>",
+    "AppearanceTabText": "<p>The CSS language is used to define the appearance of elements since the receipt to be printed is in HTML format;</p><p>to hide an element, simply add <em>display:none;</em>.</p>",
+    "LabelsTabTitle": "<h2>Labels Tab</h2>",
+    "LabelsTabText": "<p>Enter field labels, e.g., your own institution;</p><p>For the date format, use strings like dd/MM/yyyy or MM-dd-yyyy (the format is the one used by DatePipe in Angular).</p>",
+    "LogoTabTitle": "<h2>Logo Tab</h2>",
+    "LogoTabText": "<p>Select and upload an image file of your institution/library system's logo.</p>",
+    "OrderTabTitle": "<h2>Order Tab</h2>",
+    "OrderTabText": "<p>Drag and drop elements to reorder them.</p>"
+  },
   "Configuration": {
     "Title": "Configuration",
     "Profiles": "Profiles",
@@ -12,7 +28,7 @@
     "ProfileName": "Profile Name",
     "ProfileExists": "Profile \"{name}\" already exists.",
     "RenameProfile": "Rename profile",
-    "ConfirmDeleteProfile": "Are you sure you want to delete profile \"{name}\"",
+    "ConfirmDeleteProfile": "Are you sure you want to delete profile \"{name}\"?",
     "Discard": "Discard changes?",
     "General": "General",
     "Appearance": "Appearance",
@@ -21,8 +37,8 @@
     "Logo": "Logo",
     "ChooseImage": "Select an image file",
     "Profile": {
-      "ShowAuthors": "Show authors",
-      "TwoColumns": "Two columns",
+      "ShowAuthors": "Show authors row",
+      "TwoColumns": "Vertical table",
       "body": "Body",
       "table": "Table",
       "institution_logo": "Institution Logo",
@@ -51,7 +67,7 @@
   "Slip": {
     "item_barcode": "Barcode",
     "title": "Title",
-    "author": "Author",
+    "author": "Author(s)",
     "loan_date": "Loan Date",
     "due_date": "Due Date",
     "call_number": "Call Number"

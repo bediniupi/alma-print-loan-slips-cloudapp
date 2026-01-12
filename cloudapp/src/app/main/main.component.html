@@ -5,12 +5,6 @@
   <div class="cloudapp-actions">
     <button mat-flat-button type="button" color="primary" [disabled]="ids.size==0 || !selectedProfile" (click)="print()">{{ 'Print' | translate:{num: ids.size} }}</button>
   </div>
-  <p translate>Select</p>
-  <app-select-entities #selectEntities 
-    (entitySelected)="onEntitySelected($event)"
-    [entityList]="entities"
-    [selectedEntities]="ids">
-  </app-select-entities>
   <div>
     <mat-form-field>
       <mat-label translate>SelectProfile</mat-label>
@@ -21,6 +15,13 @@
       </mat-select>
     </mat-form-field>
   </div>
+  <p translate>Select</p>
+  <app-select-entities #selectEntities 
+    (entitySelected)="onEntitySelected($event)"
+    [entityList]="entities"
+    [selectedEntities]="ids">
+  </app-select-entities>
+  
 
 </div>
 <ng-template #noEntities>

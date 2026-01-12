@@ -1,4 +1,4 @@
-@mixin main-component-theme($theme, $typgraphy) {
+@mixin main-component-theme($theme, $typography) {
   section>h1 {
     background-color: mat-color(map-get($theme, primary));
     color: mat-color(map-get($theme, primary), default-contrast);

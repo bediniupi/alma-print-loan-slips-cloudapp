@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MaterialModule, AlertModule, LazyTranslateLoader } from '@exlibris/exl-cloudapp-angular-lib';
 import { TranslateICUParser } from 'ngx-translate-parser-plural-select';
-
+import { HelpComponent } from './help/help.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
@@ -34,6 +34,7 @@ export function getTranslateModuleWithICU() {
     AppComponent,
     MainComponent,
     ConfigurationComponent,
+    HelpComponent,
     ProfileComponent,
     SelectEntitiesComponent,
     SlipComponent

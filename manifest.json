@@ -1,14 +1,42 @@
 {
-   "id": "bediniupi/alma-print-receipt-cloudapp",
-   "title": "Print Receipt",
-   "description": "",
-   "subtitle": "Format and print receipts from patron workbench",
-   "author": "Nazzareno Bedini",
+   "id": "print-loan-slips",
+   "title": [
+      {
+         "lang": "en",
+         "text": "Print Loan Slips"
+      },
+      {
+         "lang": "it",
+         "text": "Stampa Ricevute Prestito"
+      }
+   ],
+   "subtitle": [
+      {
+         "lang": "en",
+         "text": "Format and print loan slips from patron workbench"
+      },
+      {
+         "lang": "it",
+         "text": "Formatta e stampa ricevute del prestito dai servizi utente"
+      }
+   ],
+   "author": "Nazzareno Bedini (Università di Pisa)",
+   "description": [
+      {
+         "lang": "en",
+         "text": "Format and print loan slips from patron workbench"
+      },
+      {
+         "lang": "it",
+         "text": "Formatta e stampa ricevute del prestito dai servizi utente"
+      }
+   ],
    "entities": [
       "LOAN",
       "REQUEST"
    ],
    "pages": {
+      "help": "/#/help",
       "config": "/#/configuration"
    },
    "contentSecurity": {
@@ -18,7 +46,7 @@
       }
    },
    "icon": {
-      "type": "font",
-      "value": "fa fa-file-text-o"
+      "type": "url",
+      "value": "/assets/print_slip_icon.png"
    }
 }

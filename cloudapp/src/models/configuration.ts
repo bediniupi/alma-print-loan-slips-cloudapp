@@ -39,7 +39,7 @@ export const defaultProfile: Profile = {
   labels: {
     slip_title: "Loan receipt",
     institution_name: "[MyInstitution]",
-    date_format: "en-US",
+    date_format:  "dd/MM/yyyy",
     signature: "Signature ______________________",
     date_text: "Date"
   },
@@ -57,6 +57,7 @@ export const defaultProfile: Profile = {
   order: ORDER_FIELDS
 }
 
+
 export const defaultConfig: Config = {
   profiles: {default: defaultProfile}
 }
@@ -64,30 +65,3 @@ export const defaultConfig: Config = {
 
 export const profileFormGroup = (profile: Profile = defaultProfile) => FormGroupUtil.toFormGroup(profile);
 export const configFormGroup = (config: Config) => FormGroupUtil.toFormGroup(config);
-/*
-export const configFormGroup = (config: Config) => {
-  return new FormGroup({
-    profiles: new FormArray(config.profiles.map(c => new FormGroup({
-      popup_top: new FormControl(c.popup_top),
-      popup_left: new FormControl(c.popup_left),
-      popup_width: new FormControl(c.popup_width),
-      popup_height: new FormControl(c.popup_height),
-      slip_title: new FormControl(c.slip_title),
-      institution_name: new FormControl(c.institution_name),
-      institution_logo: new FormControl(c.institution_logo),
-      body_css: new FormControl(c.body_css),
-      table_css: new FormControl(c.table_css),
-      institution_logo_css: new FormControl(c.institution_logo_css),
-      institution_css: new FormControl(c.institution_css),
-      library_css: new FormControl(c.library_css),
-      title_css: new FormControl(c.title_css),
-      user_css: new FormControl(c.user_css),
-      loans_css: new FormControl(c.loans_css),
-      signature_css: new FormControl(c.signature_css),
-      date_format: new FormControl(c.date_format),
-      signature: new FormControl(c.signature),
-      date_text: new FormControl(c.date_text)
-    })))
-  })
-}
-*/
