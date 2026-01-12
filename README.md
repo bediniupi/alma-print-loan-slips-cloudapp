@@ -1,4 +1,4 @@
-# alma-print-slips-cloudapp
+# alma-print-loan-slips-cloudapp
 Format and print loan slips from patron workbench.
 To use the app to view user loans, select a print profile and print the receipt; it is important that the circulation desk is selected.
 For a better result, remove the header and footer print options from the browser's print window and choose 'fit to page width'.
