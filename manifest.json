@@ -1,5 +1,5 @@
 {
-   "id": "print-loan-slips",
+   "id": "bediniupi/alma-print-loan-slips-cloudapp",
    "title": [
       {
          "lang": "en",
@@ -20,7 +20,7 @@
          "text": "Formatta e stampa ricevute del prestito dai servizi utente"
       }
    ],
-   "author": "Nazzareno Bedini (Università di Pisa); Josh Weisman"
+   "author": "Nazzareno Bedini (Università di Pisa); Josh Weisman",
    "description": [
       {
          "lang": "en",
