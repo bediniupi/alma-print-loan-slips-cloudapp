@@ -65,7 +65,14 @@ export class SlipComponent implements OnInit {
       switchMap(() => forkJoin(links.map(l=>this.restService.call<Loan>(l)))),
       tap(loans => this.loans=loans),
       switchMap(loans => this.restService.call(`/users/${loans[0].user_id}`)),
-      tap(user => this.user=user),
+      //tap(user => this.user=user),
+      // modified version fo preferred name
+      tap(user => {
+        this.user = {
+          ...user,
+          preferred_full_name: this.calculatePreferredFullName(user)
+        };
+      }),
       delay(10), /* Allow viewContainer to be instatiated */
       tap(() => {
         this.profile.order.forEach(o=>this.viewContainer.createEmbeddedView(this.views[o]));
@@ -87,5 +94,13 @@ export class SlipComponent implements OnInit {
       ),
       of(null)
     )
+  }
+  private calculatePreferredFullName(user: User): string {
+    const first = user.pref_first_name?.trim() ? user.pref_first_name : user.first_name;
+    const middle = user.pref_middle_name?.trim() ? user.pref_middle_name : '';
+    const last = user.pref_last_name?.trim() ? user.pref_last_name : user.last_name;
+
+    // Rimuove eventuali elementi vuoti ed unisce con un solo spazio
+    return [first, middle, last].filter(Boolean).join(' ');
   }
 }

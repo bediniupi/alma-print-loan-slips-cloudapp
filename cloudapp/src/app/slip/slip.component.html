@@ -12,7 +12,7 @@
   <div [style]="styles('title')">{{profile.labels.slip_title}}</div>
 </ng-template>
 <ng-template #userTmpl>
-  <div [style]="styles('user')">{{user.full_name}}<span>, </span>{{user.primary_id}}</div>
+  <div [style]="styles('user')">{{user?.preferred_full_name}}<span>, </span>{{user.primary_id}}</div>
 </ng-template>
 <ng-template #loansTmpl>
   <div [style]="styles('loans')" [ngSwitch]="profile.two_columns">
